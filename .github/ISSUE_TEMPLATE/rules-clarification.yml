@@ -1,0 +1,46 @@
+name: Rules clarification
+description: Ask about unclear, conflicting, or incomplete campaign text.
+title: "[Rules] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping make the campaign easier to use. Actual play is helpful but not required.
+
+  - type: input
+    id: location
+    attributes:
+      label: Rule location
+      description: Identify the section, Track, objective, table, or workbook sheet.
+      placeholder: "Example: Track Rules > Flank > Ramming Speed"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_text
+    attributes:
+      label: Relevant text
+      description: Quote only the short passage needed to identify the question.
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: Explain what is unclear or appears to conflict with another rule.
+    validations:
+      required: true
+
+  - type: textarea
+    id: interpretation
+    attributes:
+      label: Your current interpretation
+      description: Tell us how you would resolve it at the table, if you have a preference.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Include the game system, campaign scale, or related publication when relevant.
+

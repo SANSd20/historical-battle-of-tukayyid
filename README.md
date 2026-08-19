@@ -19,6 +19,8 @@ All feedback is welcome, whether based on actual play or simply reviewing the ru
 
 Issue reports and playtest notes are welcome through GitHub Issues. Please include the campaign scale, Track, forces used, and the result when that information is available.
 
+See the [playtest checklist](PLAYTESTING.md) before beginning a Track. Structured issue forms are available for actual-play reports, balance feedback, and rules clarifications.
+
 ## Required publications
 
 This project supplements rather than reproduces the published rules. To use it, players need access to:

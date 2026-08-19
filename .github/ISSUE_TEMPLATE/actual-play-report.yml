@@ -1,0 +1,103 @@
+name: Actual-play report
+description: Record a Track or Region played with the v0.1 campaign rules.
+title: "[Playtest] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for playing. Estimates are acceptable when exact totals were not recorded.
+
+  - type: input
+    id: version
+    attributes:
+      label: Rules version
+      value: "0.1 Playtest"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: system
+    attributes:
+      label: Game system
+      options:
+        - BattleTech
+        - Alpha Strike
+        - Mixed or converted between systems
+    validations:
+      required: true
+
+  - type: dropdown
+    id: scale
+    attributes:
+      label: Campaign scale
+      options:
+        - Star
+        - Binary
+        - Trinary
+    validations:
+      required: true
+
+  - type: input
+    id: track
+    attributes:
+      label: Region and Track
+      placeholder: "Example: Racice Delta / Flank"
+    validations:
+      required: true
+
+  - type: textarea
+    id: forces
+    attributes:
+      label: Forces
+      description: Identify factions, attacker and defender, deployed BV or PV, skill levels, and major Battlefield Support choices.
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: Record the winner, OP totals, objectives completed, ending turn, and why the Track ended.
+    validations:
+      required: true
+
+  - type: textarea
+    id: economy
+    attributes:
+      label: Campaign economy
+      description: Record SP before and after the Track, Support Allocation, Supply rewards, and major repair or replacement spending.
+
+  - type: textarea
+    id: casualties
+    attributes:
+      label: Casualties and recovery
+      description: Summarize destroyed, crippled, recovered, repaired, and replaced units.
+
+  - type: textarea
+    id: observations
+    attributes:
+      label: What worked well?
+      description: Note decisions, rules, and moments that felt clear, interesting, or appropriately difficult.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problems
+    attributes:
+      label: What should change?
+      description: Note unclear text, balance concerns, bookkeeping burdens, or pacing problems.
+
+  - type: textarea
+    id: recommendation
+    attributes:
+      label: Recommended change
+      description: Suggest revised wording or values when possible.
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Submission check
+      options:
+        - label: I have identified any house rules or departures from the published setup that affected this report.
+          required: true
+
