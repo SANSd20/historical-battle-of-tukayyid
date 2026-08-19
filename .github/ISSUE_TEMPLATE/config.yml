@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Download the current playtest release
+    url: https://github.com/SANSd20/historical-battle-of-tukayyid/releases/tag/v0.1-playtest
+    about: Get the current rules, SMF text, and Battlefield Support workbook.

@@ -1,0 +1,60 @@
+name: Balance feedback
+description: Report a rule, objective, reward, cost, or force allowance that may be unbalanced.
+title: "[Balance] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Feedback based on rules review, probability, comparison, or actual play is welcome.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Campaign economy and SP
+        - Track objectives and OP
+        - Campaign BV and force construction
+        - Battlefield Support
+        - Repairs, replacement, and recovery
+        - Named commanders and advancement
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: rule
+    attributes:
+      label: Rule or Track
+      placeholder: "Example: Supply campaign reward"
+    validations:
+      required: true
+
+  - type: textarea
+    id: concern
+    attributes:
+      label: Balance concern
+      description: Explain what appears too strong, too weak, too easy, or too difficult.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence or reasoning
+      description: Actual play is not required. Comparisons, calculations, and expected effects are useful.
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Campaign impact
+      description: Describe how the concern affects decisions, pacing, or later Tracks.
+
+  - type: textarea
+    id: recommendation
+    attributes:
+      label: Suggested adjustment
+      description: Propose a replacement value or wording if you have one.
+
