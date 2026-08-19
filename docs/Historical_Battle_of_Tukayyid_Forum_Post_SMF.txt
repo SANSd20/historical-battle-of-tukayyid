@@ -1,0 +1,47 @@
+SUBJECT: Historical: Battle of Tukayyid — Version 0.1 Playtest
+
+[center][size=18pt][b][color=#607FAA]HISTORICAL:[/color][/b][/size]
+[size=24pt][b]BATTLE OF TUKAYYID[/b][/size]
+[i]Version 0.1 Playtest[/i][/center]
+
+This is a work-in-progress update to the Battle of Tukayyid campaign system. It retains the original campaign's structure and character while incorporating selected rules and concepts from the BattleTech Core Rulebook and Hot Spots: Draconis Reach.
+
+Only changed or additional rules are presented in the playtest document. Unless specifically stated otherwise, continue using the published Battle of Tukayyid and Hot Spots: Draconis Reach rules, together with either the BattleTech Core Rulebook or Total Warfare and BattleTech: Mercenaries.
+
+[quote]In May 3052, the armies of ComStar met the invading Clans on Tukayyid. For twenty-one days, they fought across seven campaign regions to decide whether the Clan advance toward Terra would continue. ComStar prevailed, and the resulting truce halted the invasion for fifteen years.
+
+At the time, Tukayyid was celebrated as the battle that saved the Inner Sphere. Its defenders had denied the Clans their ultimate prize and given the Great Houses time to recover, rearm, and prepare for the conflicts that followed.
+
+Yet, as the battle's centennial approaches, Terra rests in Clan hands and an ilClan rules from humanity's birthplace. Tukayyid unquestionably changed the course of history, but its victory came at a terrible price.
+
+Was the time purchased on Tukayyid worth its cost—and what did the Inner Sphere ultimately do with it?
+
+[i]—Dr. Elara Venn, Tukayyid: A Century Later, Tukayyid Memorial Institute, 3151[/i][/quote]
+
+[b]Required Publications[/b]
+
+[table]
+[tr][td][b]Rules Path[/b][/td][td][b]Required Publications[/b][/td][/tr]
+[tr][td]New core rules[/td][td]BattleTech Core Rulebook[/td][/tr]
+[tr][td]Alternative older rules[/td][td]Total Warfare and BattleTech: Mercenaries[/td][/tr]
+[tr][td]Required with either path[/td][td]Battle of Tukayyid and Hot Spots: Draconis Reach[/td][/tr]
+[/table]
+
+[b]Download and Playtest[/b]
+
+[list]
+[li][url=https://github.com/SANSd20/historical-battle-of-tukayyid/releases/tag/v0.1-playtest]Download Version 0.1 Playtest[/url][/li]
+[li][url=https://github.com/SANSd20/historical-battle-of-tukayyid/blob/main/PLAYTESTING.md]Read the Playtest Checklist[/url][/li]
+[/list]
+
+[b]Feedback[/b]
+
+All feedback is welcome, whether based on actual play or simply reviewing the rules. Feedback on balance, campaign pacing, clarity, Track objectives, and the campaign economy would be especially helpful.
+
+[list]
+[li][url=https://github.com/SANSd20/historical-battle-of-tukayyid/issues/new?template=actual-play-report.yml]Submit an Actual-Play Report[/url][/li]
+[li][url=https://github.com/SANSd20/historical-battle-of-tukayyid/issues/new?template=balance-feedback.yml]Submit Balance Feedback[/url][/li]
+[li][url=https://github.com/SANSd20/historical-battle-of-tukayyid/issues/new?template=rules-clarification.yml]Ask for a Rules Clarification[/url][/li]
+[/list]
+
+This is an unofficial, non-commercial fan project. BattleTech and related names and materials are trademarks and copyrighted properties of their respective owners. No affiliation with or endorsement by The Topps Company, Inc., Catalyst Game Labs, or any other rights holder is claimed.
