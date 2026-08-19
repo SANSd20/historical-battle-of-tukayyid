@@ -12,7 +12,6 @@ All feedback is welcome, whether based on actual play or simply reviewing the ru
 
 - `docs/Historical_Battle_of_Tukayyid_Campaign_Rules.docx` — formatted campaign rules.
 - `docs/Historical_Battle_of_Tukayyid_Campaign_Rules_SMF.txt` — BBCode version for Simple Machines Forum posts.
-- `workbook/BoT_BSP_Toggle.xlsx` — companion Battlefield Support workbook with Original and Modern BSP modes.
 - `scripts/` — source used to build the campaign document and SMF text.
 
 ## Feedback
