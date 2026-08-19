@@ -77,8 +77,8 @@ for block in blocks(Document(SRC)):
         seen_title = True
     elif text == "BATTLE OF TUKAYYID":
         out.append("[size=24pt][b]BATTLE OF TUKAYYID[/b][/size]")
-    elif text == "Changes-Only Campaign Playtest Draft":
-        out.append("[i]Changes-Only Playtest Draft[/i][/center]\n")
+    elif text == "Version 0.1 Playtest":
+        out.append("[i]Version 0.1 Playtest[/i][/center]\n")
     elif seen_title and text.startswith("HISTORICAL: BATTLE OF TUKAYYID"):
         continue
     elif text.startswith("In May 3052, the armies of ComStar"):

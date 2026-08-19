@@ -150,13 +150,13 @@ r = p.add_run("HISTORICAL:"); r.bold = True; r.font.name = "Aptos Display"; r.fo
 p = doc.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
 r = p.add_run("BATTLE OF TUKAYYID"); r.bold = True; r.font.name = "Aptos Display"; r.font.size = Pt(31); r.font.color.rgb = RGBColor.from_string(DARK)
 p = doc.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER; p.paragraph_format.space_before = Pt(12)
-r = p.add_run("Changes-Only Campaign Playtest Draft"); r.italic = True; r.font.size = Pt(12); r.font.color.rgb = RGBColor.from_string(GREY)
+r = p.add_run("Version 0.1 Playtest"); r.italic = True; r.font.size = Pt(12); r.font.color.rgb = RGBColor.from_string(GREY)
 doc.add_paragraph().paragraph_format.space_after = Pt(18)
 p = doc.add_paragraph("This is a work-in-progress update to the Battle of Tukayyid campaign system. It retains the original campaign's structure and character while incorporating selected rules and concepts from the Core Rulebook and Hot Spots: Draconis Reach.")
 p.alignment = WD_ALIGN_PARAGRAPH.CENTER
 p = doc.add_paragraph("Only changed or additional rules are presented below. Unless specifically stated otherwise, continue using the published Battle of Tukayyid, Core Rulebook, and Hot Spots: Draconis Reach rules.")
 p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-p = doc.add_paragraph("All feedback is welcome, whether based on actual play or simply reviewing the rules. Feedback on balance, campaign pacing, clarity, and the values still marked for playtesting would be especially helpful.")
+p = doc.add_paragraph("All feedback is welcome, whether based on actual play or simply reviewing the rules. Feedback on balance, campaign pacing, clarity, Track objectives, and the campaign economy would be especially helpful.")
 p.alignment = WD_ALIGN_PARAGRAPH.CENTER; p.paragraph_format.space_after = Pt(18)
 historical_excerpt()
 table(["Rules Base", "Campaign Frame", "Modernization Source"], [["Core Rulebook", "Battle of Tukayyid", "Hot Spots: Draconis Reach"]], [2.1, 2.1, 2.1])
@@ -295,7 +295,7 @@ track("Flank", [
     ("Thresholds", "Crush and Turn the Tide each use a 50% threshold."),
     ("Cut Off Retreat", "Maintain either one non-crippled BattleMech or two Battlefield Support Assets per Campaign Scale near the Defender's home edge for two consecutive End Phases."),
     ("Fall Back", "After Turn the Tide is completed, withdraw at least 50% of the eligible force."),
-    ("Ramming Speed", "Add the Ramming Speed objective using its Draconis Reach procedure. Its Objective Point value is pending playtest assignment."),
+    ("Ramming Speed", "Add the Ramming Speed objective using its Draconis Reach procedure. It is worth 150 Objective Points."),
     ("Track End", "End when either side has no units in play or at Turn 8 (Turn 6 for the shortened format)."),
 ])
 
@@ -341,17 +341,11 @@ track("Supply", [
     ("Objectives", "Retain the Tukayyid casualty and survival objectives."),
     ("Delayed Group", "The delayed group enters on Turn 6."),
     ("Track End", "End when either side has no units in play or at Turn 10."),
-    ("Campaign Reward", "Award additional SP for recovered components. The SP value per component is pending playtest assignment."),
+    ("Campaign Reward", "Each component carried off the Attacker's home edge awards the Attacker 500 SP. This reward is in addition to the Track's normal Support Allocation."),
 ])
 
-final_sec = doc.add_section(WD_SECTION_START.CONTINUOUS)
-final_sec.top_margin = Inches(.78); final_sec.bottom_margin = Inches(.65); final_sec.left_margin = final_sec.right_margin = Inches(.68)
-final_sec.header_distance = Inches(.60); final_sec.footer_distance = Inches(.492); set_columns(final_sec, 1, 360)
-chapter_band("6  Open Playtest Values")
-table(["Rule", "Value Still Required"], [["Flank — Ramming Speed", "Objective Point value"], ["Supply — recovered components", "SP awarded per recovered component"]], [3.4,3.4])
-
 doc.core_properties.title = "Historical: Battle of Tukayyid - Campaign Rules"
-doc.core_properties.subject = "Changes-only campaign playtest draft"
+doc.core_properties.subject = "Version 0.1 changes-only campaign playtest"
 doc.core_properties.author = "Campaign Development Draft"
 OUT.parent.mkdir(parents=True, exist_ok=True)
 doc.save(OUT)

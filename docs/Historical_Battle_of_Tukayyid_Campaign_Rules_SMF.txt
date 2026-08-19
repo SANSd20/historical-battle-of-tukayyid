@@ -1,12 +1,12 @@
 [center][size=18pt][b][color=#607FAA]HISTORICAL:[/color][/b][/size]
 [size=24pt][b]BATTLE OF TUKAYYID[/b][/size]
-[i]Changes-Only Playtest Draft[/i][/center]
+[i]Version 0.1 Playtest[/i][/center]
 
 This is a work-in-progress update to the Battle of Tukayyid campaign system. It retains the original campaign's structure and character while incorporating selected rules and concepts from the Core Rulebook and Hot Spots: Draconis Reach.
 
 Only changed or additional rules are presented below. Unless specifically stated otherwise, continue using the published Battle of Tukayyid, Core Rulebook, and Hot Spots: Draconis Reach rules.
 
-All feedback is welcome, whether based on actual play or simply reviewing the rules. Feedback on balance, campaign pacing, clarity, and the values still marked for playtesting would be especially helpful.
+All feedback is welcome, whether based on actual play or simply reviewing the rules. Feedback on balance, campaign pacing, clarity, Track objectives, and the campaign economy would be especially helpful.
 
 [quote]In May 3052, the armies of ComStar met the invading Clans on Tukayyid. For twenty-one days, they fought across seven campaign regions to decide whether the Clan advance toward Terra would continue. ComStar prevailed, and the resulting truce halted the invasion for fifteen years.
 
@@ -419,7 +419,7 @@ Was the time purchased on Tukayyid worth its cost—and what did the Inner Spher
 
 [b]Fall Back. [/b]After Turn the Tide is completed, withdraw at least 50% of the eligible force.
 
-[b]Ramming Speed. [/b]Add the Ramming Speed objective using its Draconis Reach procedure. Its Objective Point value is pending playtest assignment.
+[b]Ramming Speed. [/b]Add the Ramming Speed objective using its Draconis Reach procedure. It is worth 150 Objective Points.
 
 [b]Track End. [/b]End when either side has no units in play or at Turn 8 (Turn 6 for the shortened format).
 
@@ -497,23 +497,4 @@ Was the time purchased on Tukayyid worth its cost—and what did the Inner Spher
 
 [b]Track End. [/b]End when either side has no units in play or at Turn 10.
 
-[b]Campaign Reward. [/b]Award additional SP for recovered components. The SP value per component is pending playtest assignment.
-
-
-[hr]
-[size=18pt][b][color=#213854]6  OPEN PLAYTEST VALUES[/color][/b][/size]
-
-[table]
-[tr]
-[td][b]Rule[/b][/td]
-[td][b]Value Still Required[/b][/td]
-[/tr]
-[tr]
-[td]Flank — Ramming Speed[/td]
-[td]Objective Point value[/td]
-[/tr]
-[tr]
-[td]Supply — recovered components[/td]
-[td]SP awarded per recovered component[/td]
-[/tr]
-[/table]
+[b]Campaign Reward. [/b]Each component carried off the Attacker's home edge awards the Attacker 500 SP. This reward is in addition to the Track's normal Support Allocation.
