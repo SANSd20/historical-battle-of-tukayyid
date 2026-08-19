@@ -152,16 +152,20 @@ r = p.add_run("BATTLE OF TUKAYYID"); r.bold = True; r.font.name = "Aptos Display
 p = doc.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER; p.paragraph_format.space_before = Pt(12)
 r = p.add_run("Version 0.1 Playtest"); r.italic = True; r.font.size = Pt(12); r.font.color.rgb = RGBColor.from_string(GREY)
 doc.add_paragraph().paragraph_format.space_after = Pt(18)
-p = doc.add_paragraph("This is a work-in-progress update to the Battle of Tukayyid campaign system. It retains the original campaign's structure and character while incorporating selected rules and concepts from the Core Rulebook and Hot Spots: Draconis Reach.")
+p = doc.add_paragraph("This is a work-in-progress update to the Battle of Tukayyid campaign system. It retains the original campaign's structure and character while incorporating selected rules and concepts from the BattleTech Core Rulebook and Hot Spots: Draconis Reach.")
 p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-p = doc.add_paragraph("Only changed or additional rules are presented below. Unless specifically stated otherwise, continue using the published Battle of Tukayyid, Core Rulebook, and Hot Spots: Draconis Reach rules.")
+p = doc.add_paragraph("Only changed or additional rules are presented below. Unless specifically stated otherwise, continue using the published Battle of Tukayyid and Hot Spots: Draconis Reach rules, together with either the BattleTech Core Rulebook or Total Warfare and BattleTech: Mercenaries.")
 p.alignment = WD_ALIGN_PARAGRAPH.CENTER
 p = doc.add_paragraph("All feedback is welcome, whether based on actual play or simply reviewing the rules. Feedback on balance, campaign pacing, clarity, Track objectives, and the campaign economy would be especially helpful.")
 p.alignment = WD_ALIGN_PARAGRAPH.CENTER; p.paragraph_format.space_after = Pt(18)
 historical_excerpt()
-table(["Rules Base", "Campaign Frame", "Modernization Source"], [["Core Rulebook", "Battle of Tukayyid", "Hot Spots: Draconis Reach"]], [2.1, 2.1, 2.1])
+table(["Rules Path", "Required Publications"], [
+    ["New core rules", "BattleTech Core Rulebook"],
+    ["Alternative older rules", "Total Warfare and BattleTech: Mercenaries"],
+    ["Required with either path", "Battle of Tukayyid and Hot Spots: Draconis Reach"],
+], [2.15, 4.15])
 doc.add_paragraph()
-rule("Using These Rules", "This document changes, replaces, or adds to the published campaign rules. Any Battle of Tukayyid, Core Rulebook, or Hot Spots: Draconis Reach rule not addressed here remains in effect.")
+rule("Using These Rules", "This document changes, replaces, or adds to the published campaign rules. Use either the BattleTech Core Rulebook or the combination of Total Warfare and BattleTech: Mercenaries for the core game and Battlefield Support rules. Battle of Tukayyid and Hot Spots: Draconis Reach are required with either rules path. Any applicable published rule not addressed here remains in effect.")
 rule("Rules Priority", "If two rules conflict, use this document. A Track rule always overrides a general campaign rule.")
 
 doc.add_page_break()

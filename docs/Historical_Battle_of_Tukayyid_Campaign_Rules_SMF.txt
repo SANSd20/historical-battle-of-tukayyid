@@ -2,9 +2,9 @@
 [size=24pt][b]BATTLE OF TUKAYYID[/b][/size]
 [i]Version 0.1 Playtest[/i][/center]
 
-This is a work-in-progress update to the Battle of Tukayyid campaign system. It retains the original campaign's structure and character while incorporating selected rules and concepts from the Core Rulebook and Hot Spots: Draconis Reach.
+This is a work-in-progress update to the Battle of Tukayyid campaign system. It retains the original campaign's structure and character while incorporating selected rules and concepts from the BattleTech Core Rulebook and Hot Spots: Draconis Reach.
 
-Only changed or additional rules are presented below. Unless specifically stated otherwise, continue using the published Battle of Tukayyid, Core Rulebook, and Hot Spots: Draconis Reach rules.
+Only changed or additional rules are presented below. Unless specifically stated otherwise, continue using the published Battle of Tukayyid and Hot Spots: Draconis Reach rules, together with either the BattleTech Core Rulebook or Total Warfare and BattleTech: Mercenaries.
 
 All feedback is welcome, whether based on actual play or simply reviewing the rules. Feedback on balance, campaign pacing, clarity, Track objectives, and the campaign economy would be especially helpful.
 
@@ -20,18 +20,24 @@ Was the time purchased on Tukayyid worth its cost—and what did the Inner Spher
 
 [table]
 [tr]
-[td][b]Rules Base[/b][/td]
-[td][b]Campaign Frame[/b][/td]
-[td][b]Modernization Source[/b][/td]
+[td][b]Rules Path[/b][/td]
+[td][b]Required Publications[/b][/td]
 [/tr]
 [tr]
-[td]Core Rulebook[/td]
-[td]Battle of Tukayyid[/td]
-[td]Hot Spots: Draconis Reach[/td]
+[td]New core rules[/td]
+[td]BattleTech Core Rulebook[/td]
+[/tr]
+[tr]
+[td]Alternative older rules[/td]
+[td]Total Warfare and BattleTech: Mercenaries[/td]
+[/tr]
+[tr]
+[td]Required with either path[/td]
+[td]Battle of Tukayyid and Hot Spots: Draconis Reach[/td]
 [/tr]
 [/table]
 
-[b]Using These Rules. [/b]This document changes, replaces, or adds to the published campaign rules. Any Battle of Tukayyid, Core Rulebook, or Hot Spots: Draconis Reach rule not addressed here remains in effect.
+[b]Using These Rules. [/b]This document changes, replaces, or adds to the published campaign rules. Use either the BattleTech Core Rulebook or the combination of Total Warfare and BattleTech: Mercenaries for the core game and Battlefield Support rules. Battle of Tukayyid and Hot Spots: Draconis Reach are required with either rules path. Any applicable published rule not addressed here remains in effect.
 
 [b]Rules Priority. [/b]If two rules conflict, use this document. A Track rule always overrides a general campaign rule.
 

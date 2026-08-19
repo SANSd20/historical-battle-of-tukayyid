@@ -1,8 +1,8 @@
 # Historical: Battle of Tukayyid
 
-*Historical: Battle of Tukayyid* is a work-in-progress update to the *Battle of Tukayyid* campaign system. It retains the original campaign's structure and character while incorporating selected rules and concepts from the *Core Rulebook* and *Hot Spots: Draconis Reach*.
+*Historical: Battle of Tukayyid* is a work-in-progress update to the *Battle of Tukayyid* campaign system. It retains the original campaign's structure and character while incorporating selected rules and concepts from the *BattleTech Core Rulebook* and *Hot Spots: Draconis Reach*.
 
-Only changed or additional rules are presented. Unless specifically stated otherwise, continue using the published *Battle of Tukayyid*, *Core Rulebook*, and *Hot Spots: Draconis Reach* rules.
+Only changed or additional rules are presented. Unless specifically stated otherwise, continue using the published *Battle of Tukayyid* and *Hot Spots: Draconis Reach* rules, together with either the *BattleTech Core Rulebook* or *Total Warfare* and *BattleTech: Mercenaries*.
 
 All feedback is welcome, whether based on actual play or simply reviewing the rules. Feedback on balance, campaign pacing, clarity, Track objectives, and the campaign economy is especially helpful.
 
@@ -12,6 +12,7 @@ All feedback is welcome, whether based on actual play or simply reviewing the ru
 
 - `docs/Historical_Battle_of_Tukayyid_Campaign_Rules.docx` — formatted campaign rules.
 - `docs/Historical_Battle_of_Tukayyid_Campaign_Rules_SMF.txt` — BBCode version for Simple Machines Forum posts.
+- `docs/Historical_Battle_of_Tukayyid_Forum_Post_SMF.txt` — complete ready-to-paste forum post with release and feedback links.
 - `scripts/` — source used to build the campaign document and SMF text.
 
 ## Feedback
@@ -22,11 +23,13 @@ See the [playtest checklist](PLAYTESTING.md) before beginning a Track. Structure
 
 ## Required publications
 
-This project supplements rather than reproduces the published rules. To use it, players need access to:
+This project supplements rather than reproduces the published rules.
 
-- *Battle of Tukayyid*
-- *Core Rulebook*
-- *Hot Spots: Draconis Reach*
+| Rules path | Required publications |
+|---|---|
+| New core rules | *BattleTech Core Rulebook* |
+| Alternative older rules | *Total Warfare* and *BattleTech: Mercenaries* |
+| Required with either path | *Battle of Tukayyid* and *Hot Spots: Draconis Reach* |
 
 ## Fan-work notice
 
