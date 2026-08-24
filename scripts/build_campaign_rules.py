@@ -46,6 +46,13 @@ def bullet(text, level=0):
 def rule(label, text):
     p = doc.add_paragraph(); p.add_run(label + ". ").bold = True; p.add_run(text); return p
 
+def compact_rule(label, text):
+    p = rule(label, text)
+    p.paragraph_format.space_after = Pt(2.5)
+    p.paragraph_format.line_spacing = 1.02
+    for r in p.runs: r.font.size = Pt(8.8)
+    return p
+
 def historical_excerpt():
     p = doc.add_paragraph()
     p.paragraph_format.left_indent = Inches(.18)
@@ -120,7 +127,7 @@ def page_number(paragraph):
 
 def track(name, items):
     doc.add_heading(name, level=2)
-    for label, text in items: rule(label, text)
+    for label, text in items: compact_rule(label, text)
 
 doc = Document()
 sec = doc.sections[0]
@@ -154,18 +161,19 @@ r = p.add_run("Version 0.1 Playtest"); r.italic = True; r.font.size = Pt(12); r.
 doc.add_paragraph().paragraph_format.space_after = Pt(18)
 p = doc.add_paragraph("This is a work-in-progress update to the Battle of Tukayyid campaign system. It retains the original campaign's structure and character while incorporating selected rules and concepts from the BattleTech Core Rulebook and Hot Spots: Draconis Reach.")
 p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-p = doc.add_paragraph("Only changed or additional rules are presented below. Unless specifically stated otherwise, continue using the published Battle of Tukayyid and Hot Spots: Draconis Reach rules, together with either the BattleTech Core Rulebook or Total Warfare and BattleTech: Mercenaries.")
+p = doc.add_paragraph("Only changed or additional rules are presented below. Unless specifically stated otherwise, continue using the published Battle of Tukayyid and Hot Spots: Draconis Reach rules, together with the rules publication selected below.")
 p.alignment = WD_ALIGN_PARAGRAPH.CENTER
 p = doc.add_paragraph("All feedback is welcome, whether based on actual play or simply reviewing the rules. Feedback on balance, campaign pacing, clarity, Track objectives, and the campaign economy would be especially helpful.")
 p.alignment = WD_ALIGN_PARAGRAPH.CENTER; p.paragraph_format.space_after = Pt(18)
 historical_excerpt()
 table(["Rules Path", "Required Publications"], [
-    ["New core rules", "BattleTech Core Rulebook"],
-    ["Alternative older rules", "Total Warfare and BattleTech: Mercenaries"],
-    ["Required with either path", "Battle of Tukayyid and Hot Spots: Draconis Reach"],
+    ["Classic - new core rules", "BattleTech Core Rulebook"],
+    ["Classic - alternative older rules", "Total Warfare and BattleTech: Mercenaries"],
+    ["Alpha Strike", "Alpha Strike: Commander's Edition"],
+    ["Required with every path", "Battle of Tukayyid and Hot Spots: Draconis Reach"],
 ], [2.15, 4.15])
 doc.add_paragraph()
-rule("Using These Rules", "This document changes, replaces, or adds to the published campaign rules. Use either the BattleTech Core Rulebook or the combination of Total Warfare and BattleTech: Mercenaries for the core game and Battlefield Support rules. Battle of Tukayyid and Hot Spots: Draconis Reach are required with either rules path. Any applicable published rule not addressed here remains in effect.")
+rule("Using These Rules", "This document changes, replaces, or adds to the published campaign rules. For Classic BattleTech, use either the BattleTech Core Rulebook or the combination of Total Warfare and BattleTech: Mercenaries. For Alpha Strike, use Alpha Strike: Commander's Edition. Battle of Tukayyid and Hot Spots: Draconis Reach are required with every rules path. Any applicable published rule not addressed here remains in effect.")
 rule("Rules Priority", "If two rules conflict, use this document. A Track rule always overrides a general campaign rule.")
 
 doc.add_page_break()
@@ -175,27 +183,43 @@ rule("Orders", "Orders objectives are not used in this campaign.")
 rule("Objective Points", "Objectives award Objective Points (OP). OP determine the winner of the current Track and are then discarded; they never carry into another Track.")
 rule("Strategic Points", "Strategic Points (SP) are the campaign's only persistent resource. Warchest Points are not used. The side that wins the most Regions wins the campaign.")
 
-doc.add_heading("Campaign Scale and Battle Value", level=2)
+doc.add_heading("Campaign Scale", level=2)
 table(["Campaign Size", "Campaign BV", "33%", "25%", "50%"], [
     ["Star", "40,000", "13,200", "10,000", "20,000"],
     ["Binary", "80,000", "26,400", "20,000", "40,000"],
     ["Trinary", "120,000", "39,600", "30,000", "60,000"],
 ], [1.4,1.2,1.2,1.2,1.2])
-rule("Fixed Denominator", "All Track percentages use the original Campaign BV allowance shown above. Losses, repairs, and replacements do not change that denominator.")
-rule("Skill Adjustment", "Use the deployed pilot's actual skills when calculating a unit's BV.")
-rule("Clan Advantage", "For Campaign Force construction and Track deployment limits only, treat each Clan pilot as one Experience Rating worse when accounting for BV. Actual skills do not change. This adjustment does not reduce SP purchase or repair costs.")
+table(["Campaign Size", "Campaign PV", "33%", "25%", "50%"], [
+    ["Star", "600", "198", "150", "300"],
+    ["Binary", "1,200", "396", "300", "600"],
+    ["Trinary", "1,800", "594", "450", "900"],
+], [1.4,1.2,1.2,1.2,1.2])
+rule("Fixed Denominator", "All Track percentages use the original Campaign BV or PV allowance shown above. Losses, repairs, and replacements do not change that denominator.")
+rule("Skill Adjustment", "Use the deployed pilot's actual skills when calculating a unit's BV or PV.")
+rule("Clan Advantage", "For Campaign Force construction and Track deployment limits only, treat each Clan pilot as one Experience Rating worse when accounting for BV or one Skill rating worse when accounting for PV. Actual skills do not change. This adjustment does not reduce SP purchase or repair costs.")
 
 doc.add_heading("Starting SP and Support Allocation", level=2)
+doc.add_heading("Classic BattleTech Starting SP", level=3)
 table(["Campaign Size", "Clan Starting SP", "ComStar Starting SP"], [
     ["Star", "13,200", "26,400"], ["Binary", "26,400", "52,800"], ["Trinary", "39,600", "79,200"]
 ], [2.0,2.0,2.0])
-doc.add_page_break()
-doc.add_heading("Support Allocation", level=2)
+doc.add_heading("Alpha Strike Starting SP", level=3)
+table(["Campaign Size", "Clan Starting SP", "ComStar Starting SP"], [
+    ["Star", "7,920", "15,840"], ["Binary", "15,840", "31,680"], ["Trinary", "23,760", "47,520"]
+], [2.0,2.0,2.0])
+doc.add_heading("Classic BattleTech Support Allocation", level=2)
 table(["Campaign Size", "Result", "Clan", "ComStar"], [
     ["Star", "Unsuccessful / Successful / Complete", "1,100 / 2,200 / 3,300", "2,200 / 4,400 / 6,600"],
     ["Binary", "Unsuccessful / Successful / Complete", "2,200 / 4,400 / 6,600", "4,400 / 8,800 / 13,200"],
     ["Trinary", "Unsuccessful / Successful / Complete", "3,300 / 6,600 / 9,900", "6,600 / 13,200 / 19,800"],
 ], [1.1,2.2,2.0,2.0])
+doc.add_heading("Alpha Strike Support Allocation", level=2)
+table(["Campaign Size", "Result", "Clan", "ComStar"], [
+    ["Star", "Unsuccessful / Successful / Complete", "660 / 1,320 / 1,980", "1,320 / 2,640 / 3,960"],
+    ["Binary", "Unsuccessful / Successful / Complete", "1,320 / 2,640 / 3,960", "2,640 / 5,280 / 7,920"],
+    ["Trinary", "Unsuccessful / Successful / Complete", "1,980 / 3,960 / 5,940", "3,960 / 7,920 / 11,880"],
+], [1.1,2.2,2.0,2.0])
+rule("Economic Scale", "The Alpha Strike amounts preserve the same percentage of total Campaign Force value and the same two-to-one ComStar logistical advantage as the Classic BattleTech amounts. Alpha Strike unit value is calculated at PV x 40 SP.")
 bullet("Award Support Allocation after every completed Track. Unspent SP carries forward.")
 bullet("Unsuccessful: the force completed at least one objective but scored fewer Objective Points.")
 bullet("Successful: the force scored more Objective Points.")
@@ -207,33 +231,41 @@ bullet("Only the single highest applicable tier is awarded.")
 doc.add_page_break()
 chapter_band("2  Between Tracks")
 doc.add_heading("SP Activities", level=2)
-table(["Activity", "SP Cost"], [
-    ["Repair armor only", "Unit tonnage ÷ 2"], ["Repair structure or critical damage", "Unit tonnage × 2"],
-    ["Repair a crippled unit", "Unit tonnage × 3"], ["Repair a destroyed, recoverable unit", "Unit tonnage × 5"],
-    ["Clan or Mixed Technology repair", "Multiply repair cost by 1.5; round up"],
-    ["Combat vehicle or battle armor repair", "Halve repair cost; round up"],
-    ["Purchase replacement unit", "Actual pilot-adjusted BV in SP"], ["Sell fully repaired unit", "BV ÷ 2"],
-    ["Scrap recoverable destroyed unit", "BV ÷ 4"], ["Standard ammunition", "10 SP per ton"],
-    ["Advanced or experimental ammunition", "100 SP per ton"],
-    ["Reconfigure OmniMech, OmniVehicle, or modular BA", "Unit tonnage ÷ 2"],
-    ["Heal MechWarrior", "30 SP per wound; maximum one wound between Tracks"],
-    ["Heal battle armor trooper", "10 SP"], ["Replace killed battle armor trooper", "20 SP"],
-], [4.4,2.9])
+table(["Activity", "Classic BattleTech", "Alpha Strike"], [
+    ["Repair armor only", "Unit tonnage ÷ 2", "Size × 20"],
+    ["Repair structure or critical damage", "Unit tonnage × 2", "Size × 40"],
+    ["Repair a crippled unit", "Unit tonnage × 3", "Size × 60"],
+    ["Repair a destroyed, recoverable unit", "Unit tonnage × 5", "Size × 100"],
+    ["Clan or Mixed Technology repair", "Multiply repair cost by 1.5; round up", "Multiply repair cost by 1.5; round up"],
+    ["Combat vehicle or battle armor repair", "Halve repair cost; round up", "Halve repair cost; round up"],
+    ["Purchase replacement unit", "Actual pilot-adjusted BV", "Actual Skill-adjusted PV × 40"],
+    ["Sell fully repaired unit", "BV ÷ 2", "PV × 20"],
+    ["Scrap recoverable destroyed unit", "BV ÷ 4", "PV × 10"],
+    ["Standard ammunition", "10 SP per ton", "20 SP per unit without ENE"],
+    ["Advanced or experimental ammunition", "100 SP per ton", "20 SP per available munition type"],
+    ["Reconfigure OmniMech, OmniVehicle, or modular BA", "Unit tonnage ÷ 2", "Size × 10"],
+    ["Heal MechWarrior or crew", "30 SP per wound; maximum one wound between Tracks", "30 SP per injury"],
+    ["Heal battle armor trooper", "10 SP", "10 SP"],
+    ["Replace killed battle armor trooper", "20 SP", "20 SP"],
+], [3.0,2.15,2.15])
 rule("Repair Category", "Use only the highest repair category that applies to a unit. After determining that category, apply all Technology Base and unit-type modifiers, then round fractions up.")
 rule("Availability", "Armor-only repairs, rearming, and reconfiguration are ready for the next Track. Structure, critical, crippled, and destroyed-unit repairs are unavailable until the next Region. Replacement units are also unavailable until the next Region.")
 rule("Reconfiguration", "A unit must be fully repaired before reconfiguration.")
+rule("Alpha Strike Ammunition", "Every participating Alpha Strike unit without ENE must be rearmed. Until then, reduce its weapon damage by 1 at every range, minimum 0, and it cannot use ammunition-dependent abilities, including ART, BOMB, FLK, HT, IF, LRM, MSL, SRM, TOR, AMS, C3RS, MDS, NARC, and RSD. An unrearmed ENE aerospace unit loses BOMB but is otherwise unaffected.")
+rule("Alternate Munitions", "Pay 20 SP for each alternate munition type made available to an Alpha Strike unit; standard rearming provides none.")
 
 doc.add_heading("Replacement and Recovery", level=2)
 rule("Replacement Slot", "Only a destroyed unit creates a replacement slot. The replacement must be the same broad type: BattleMech, battle armor, combat vehicle, or conventional infantry. Weight class, model, and variant may change if the replacement is legal and affordable.")
 rule("Selection", "Select a replacement from the relevant faction or Tukayyid Random Assignment Table. Its pilot uses the skill level purchased for that roster slot. A replacement begins with full standard ammunition.")
 rule("Recovery Roll", "After a Track, the original owner rolls 2D6 for each eligible destroyed unit. On a result of 9+, the unit is recoverable. On a result of 8 or less, it is lost. Conventional infantry, crashed aerospace units, and units destroyed by the final damage from artillery or bombing cannot be recovered.")
-rule("Truly Destroyed", "A BattleMech is truly destroyed when its center-torso structure is eliminated. A vehicle is truly destroyed by a fuel-tank explosion or by elimination of internal structure in a non-turret, non-rotor location. Battle armor uses a 7+ unit-survival check. A truly destroyed unit cannot be recovered or repaired.")
+rule("Classic BattleTech Destruction", "A BattleMech is truly destroyed when its center-torso structure is eliminated. A vehicle is truly destroyed by a fuel-tank explosion or loss of internal structure in a non-turret, non-rotor location. Battle armor uses a 7+ survival check. Truly destroyed units cannot be recovered or repaired.")
+rule("Alpha Strike Destruction", "A unit destroyed by an Ammo Hit or Fuel Hit without CASE or CASEII, or in a crash, is truly destroyed. A ground unit destroyed by a Unit Destroyed or Crew Killed critical remains eligible for the Recovery Roll.")
 rule("Ownership", "Enemy units are never captured. Every recoverable unit remains the property of its original owner.")
 
 doc.add_heading("Personnel", level=2)
-bullet("A vehicle crew is killed when its vehicle is destroyed.")
-bullet("Each Commander Hit or Crew Stunned result inflicts one wound on the affected crew member.")
-bullet("Each battle armor trooper survives destruction on 7+; Clan battle armor applies a −2 modifier to this target number.")
+rule("Classic BattleTech Personnel", "A destroyed vehicle's crew is killed. Each Commander Hit or Crew Stunned result inflicts one wound. Each battle armor trooper survives destruction on 7+; Clan battle armor applies a −2 modifier.")
+rule("Alpha Strike Criticals", "A Crew Killed or Unit Destroyed critical kills the pilot or crew. A Crew Stunned critical wounds the pilot or crew.")
+rule("Alpha Strike Destroyed Units", "If a destroyed unit's personnel were not already killed, roll 2D6: on 6+ they are unharmed; on 4–5 they are wounded; on 2–3 they are killed. A wounded pilot or crew counts as three injuries for healing costs.")
 
 chapter_band("3  Named Commanders")
 table(["Campaign Size", "Starting Named Commanders", "Maximum"], [["Star","2","4"],["Binary","4","8"],["Trinary","6","12"]], [2.4,2.4,2.0])
@@ -253,7 +285,8 @@ table(["Improvement", "New Rating / Level", "Cumulative SP"], [
     ["Edge", "7 / 8 / 9 / 10", "560 / 720 / 900 / 1,100"],
     ["Edge Abilities", "1 / 2 / 3 / 4 / 5", "60 / 180 / 360 / 600 / 900"],
 ], [2.1,2.7,2.6])
-rule("Edge", "At the start of each Track, each named commander's Edge refreshes to its current rating; unspent Edge never carries over. After rolling, spend 1 Edge to add +1 to an attack roll, reroll a motive-damage result, or reroll a critical hit scored against that commander's unit. Edge and Edge Abilities belong to the commander and cannot be transferred.")
+edge_rule = rule("Edge", "Each named commander's Edge refreshes at the start of a Track; unspent Edge does not carry over. After rolling, spend 1 Edge to add +1 to an attack roll, reroll Motive Systems Damage, or reroll a critical hit against that commander's unit. Accept the reroll; spend no more than 1 Edge per result. In Alpha Strike, increasing 11 to 12 does not cause a natural-12 critical. Edge and Edge Abilities cannot be transferred.")
+edge_rule.paragraph_format.keep_together = True
 rule("Excluded Systems", "Do not use the Draconis Reach handicap/BSP compensation system or unmatched Special Command Ability initiative rules.")
 
 doc.add_heading("Formation and Command", level=2)
@@ -276,9 +309,9 @@ track_sec = doc.add_section(WD_SECTION_START.CONTINUOUS)
 track_sec.top_margin = Inches(.78); track_sec.bottom_margin = Inches(.65); track_sec.left_margin = track_sec.right_margin = Inches(.68)
 track_sec.header_distance = Inches(.60); track_sec.footer_distance = Inches(.492); set_columns(track_sec, 2, 360)
 chapter_band("5  Track Rules")
-rule("Track End", "Unless a Track states otherwise, check every Track End condition during the End Phase. An objective ends a Track only when its rules specifically say so.")
-rule("Published Values", "Retain every published objective value that this document does not expressly replace. Ignore all Orders objectives.")
-rule("Recovery", "Apply the campaign-wide original-owner recovery rules even when the Draconis Reach version of a Track prohibits salvage.")
+compact_rule("Track End", "Unless a Track states otherwise, check every Track End condition during the End Phase. An objective ends a Track only when its rules specifically say so.")
+compact_rule("Published Values", "Retain every published objective value that this document does not expressly replace. Ignore all Orders objectives.")
+compact_rule("Recovery", "Apply the campaign-wide original-owner recovery rules even when the Draconis Reach version of a Track prohibits salvage.")
 
 track("Assault", [
     ("Conquer", "Completing Conquer does not end the Track. If both sides complete it in the same End Phase, neither side scores it."),

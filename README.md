@@ -11,9 +11,8 @@ All feedback is welcome, whether based on actual play or simply reviewing the ru
 ## Files
 
 - `docs/Historical_Battle_of_Tukayyid_Campaign_Rules.docx` — formatted campaign rules.
-- `docs/Historical_Battle_of_Tukayyid_Campaign_Rules_SMF.txt` — BBCode version for Simple Machines Forum posts.
 - `docs/Historical_Battle_of_Tukayyid_Forum_Post_SMF.txt` — complete ready-to-paste forum post with release and feedback links.
-- `scripts/` — source used to build the campaign document and SMF text.
+- `scripts/` — source used to build the campaign document.
 
 ## Feedback
 
