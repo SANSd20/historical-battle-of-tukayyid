@@ -6,7 +6,7 @@ Only changed or additional rules are presented. Unless specifically stated other
 
 All feedback is welcome, whether based on actual play or simply reviewing the rules. Feedback on balance, campaign pacing, clarity, Track objectives, and the campaign economy is especially helpful.
 
-**Current version:** 0.1 Playtest
+**Current version:** 0.2 Playtest
 
 ## Files
 

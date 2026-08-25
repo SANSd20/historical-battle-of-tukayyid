@@ -157,7 +157,7 @@ r = p.add_run("HISTORICAL:"); r.bold = True; r.font.name = "Aptos Display"; r.fo
 p = doc.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
 r = p.add_run("BATTLE OF TUKAYYID"); r.bold = True; r.font.name = "Aptos Display"; r.font.size = Pt(31); r.font.color.rgb = RGBColor.from_string(DARK)
 p = doc.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER; p.paragraph_format.space_before = Pt(12)
-r = p.add_run("Version 0.1 Playtest"); r.italic = True; r.font.size = Pt(12); r.font.color.rgb = RGBColor.from_string(GREY)
+r = p.add_run("Version 0.2 Playtest"); r.italic = True; r.font.size = Pt(12); r.font.color.rgb = RGBColor.from_string(GREY)
 doc.add_paragraph().paragraph_format.space_after = Pt(18)
 p = doc.add_paragraph("This is a work-in-progress update to the Battle of Tukayyid campaign system. It retains the original campaign's structure and character while incorporating selected rules and concepts from the BattleTech Core Rulebook and Hot Spots: Draconis Reach.")
 p.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -382,7 +382,7 @@ track("Supply", [
 ])
 
 doc.core_properties.title = "Historical: Battle of Tukayyid - Campaign Rules"
-doc.core_properties.subject = "Version 0.1 changes-only campaign playtest"
+doc.core_properties.subject = "Version 0.2 changes-only campaign playtest"
 doc.core_properties.author = "Campaign Development Draft"
 OUT.parent.mkdir(parents=True, exist_ok=True)
 doc.save(OUT)
