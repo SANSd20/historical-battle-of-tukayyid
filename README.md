@@ -10,6 +10,7 @@ All feedback is welcome, whether based on actual play or simply reviewing the ru
 
 ## Files
 
+- `HB-PROJECT-STATUS.md` — BattleTech Historical Battles umbrella identity, current work, resume points, and authority map.
 - `docs/Historical_Battle_of_Tukayyid_Campaign_Rules.docx` — formatted campaign rules.
 - `docs/Historical_Battle_of_Tukayyid_Forum_Post_SMF.txt` — complete ready-to-paste forum post with release and feedback links.
 - `scripts/` — source used to build the campaign document.
